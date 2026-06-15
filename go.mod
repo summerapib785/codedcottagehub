@@ -1,3 +1,3 @@
-module key_rotator_5493c1
+module key_rotator_c8d2d5
 
 go 1.22
